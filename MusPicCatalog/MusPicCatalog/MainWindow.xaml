@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusPicCatalog"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Background="#FFB3D294">
     <Grid>
-        
+        <ListBox x:Name="picturesL" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="427,10,10,253" SelectionChanged="picturesL_SelectionChanged"/>
+        <ComboBox x:Name="categories" HorizontalAlignment="Left" Margin="667,195,0,0" VerticalAlignment="Top" Width="123" Height="30" SelectionChanged="categories_SelectionChanged"/>
+        <TextBox x:Name="naiti_tag" HorizontalAlignment="Left" Margin="166,338,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="poisk_name" HorizontalAlignment="Left" Margin="667,247,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="123" Height="28"/>
+        <TextBox x:Name="addT" HorizontalAlignment="Left" Margin="457,207,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="poisk_po_imeni" Content="поис по имени" HorizontalAlignment="Left" Margin="667,291,0,0" VerticalAlignment="Top" Width="123" Click="poisk_po_imeni_Click"/>
+        <Button x:Name="add_tag" Content="добавить тег" HorizontalAlignment="Left" Margin="481,232,0,0" VerticalAlignment="Top" Click="add_tag_Click"/>
+        <Button x:Name="delete_pic" Content="удалить картинку" HorizontalAlignment="Left" Margin="441,332,0,0" VerticalAlignment="Top" Width="114" Click="delete_pic_Click"/>
+        <Button x:Name="save_pics" Content="сохранить картинки" HorizontalAlignment="Left" Margin="441,359,0,0" VerticalAlignment="Top" Click="save_pics_Click"/>
+        <Button x:Name="teg_poisk" Content="найти по тегу" HorizontalAlignment="Left" Margin="166,364,0,0" VerticalAlignment="Top" Width="115" RenderTransformOrigin="0.146,0.888" Click="teg_poisk_Click"/>
+        <Button x:Name="URL" Content="загрузить по ссылке" HorizontalAlignment="Left" Margin="667,379,0,0" VerticalAlignment="Top" Width="123" Click="URL_Click"/>
+        <Button x:Name="Downland" Content="загрузить с компа" HorizontalAlignment="Left" Margin="667,404,0,0" VerticalAlignment="Top" Width="123" Click="Downland_Click"/>
+        <Image x:Name="PicImg" HorizontalAlignment="Left" Height="229" Margin="41,43,0,0" VerticalAlignment="Top" Width="294"/>
+
     </Grid>
 </Window>
