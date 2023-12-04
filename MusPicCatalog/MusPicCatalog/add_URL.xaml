@@ -5,13 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusPicCatalog"
         mc:Ignorable="d"
-        Title="add_URL" Height="450" Width="800">
+        Title="add_URL" Height="450" Width="800" Background="#FF6A7B5A">
     <Grid>
-        <Button x:Name="OK" Content="Button" HorizontalAlignment="Left" Margin="260,345,0,0" VerticalAlignment="Top" Click="OK_Click"/>
-        <Button x:Name="cancel" Content="Button" HorizontalAlignment="Left" Margin="469,350,0,0" VerticalAlignment="Top" Click="cancel_Click"/>
-        <TextBox x:Name="name" HorizontalAlignment="Left" Margin="152,188,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="url" HorizontalAlignment="Left" Margin="289,103,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="categr" HorizontalAlignment="Left" Margin="572,206,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="OK" Content="Подтвердить" HorizontalAlignment="Left" Margin="257,318,0,0" VerticalAlignment="Top" Click="OK_Click" Width="84" Height="25"/>
+        <Button x:Name="cancel" Content="Закрыть" HorizontalAlignment="Left" Margin="468,318,0,0" VerticalAlignment="Top" Click="cancel_Click" Width="84" Height="25"/>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Margin="186,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" Height="32" Background="#FFE2E2E2"/>
+        <TextBox x:Name="url" HorizontalAlignment="Left" Margin="186,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="490" Height="30" Background="#FFE2E2E2"/>
+        <TextBox x:Name="categr" HorizontalAlignment="Left" Margin="468,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" Height="32" Background="#FFE2E2E2"/>
+        <TextBlock HorizontalAlignment="Left" Height="19" Margin="61,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="Вставьте "/><Run Text="URL"/><Run Language="ru-ru" Text=" ссылку:"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="71,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"><Run Language="ru-ru" Text="Название стикера"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="28" Margin="400,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="63"><Run Language="ru-ru" Text="Категория"/></TextBlock>
 
     </Grid>
 </Window>

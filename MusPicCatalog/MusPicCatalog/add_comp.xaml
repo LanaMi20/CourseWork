@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusPicCatalog"
         mc:Ignorable="d"
-        Title="add_comp" Height="450" Width="800">
+        Title="add_comp" Height="450" Width="800" Background="#FF6A7B5A">
     <Grid>
-        <Button x:Name="OK" Content="Button" HorizontalAlignment="Left" Margin="218,325,0,0" VerticalAlignment="Top" Click="OK_Click"/>
-        <Button x:Name="Cancel" Content="Button" HorizontalAlignment="Left" Margin="484,345,0,0" VerticalAlignment="Top" Click="Cancel_Click"/>
-        <TextBox x:Name="name" HorizontalAlignment="Left" Margin="129,195,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="categr" HorizontalAlignment="Left" Margin="510,195,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="OK" Content="Подвердить" HorizontalAlignment="Left" Margin="305,345,0,0" VerticalAlignment="Top" Click="OK_Click" Width="76" Height="26"/>
+        <Button x:Name="Cancel" Content="Закрыть" HorizontalAlignment="Left" Margin="416,345,0,0" VerticalAlignment="Top" Click="Cancel_Click" Width="76" Height="26"/>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Margin="220,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="32" Background="#FFE2E2E2"/>
+        <TextBox x:Name="categr" HorizontalAlignment="Left" Margin="497,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="32" Background="#FFE2E2E2"/>
+        <TextBlock HorizontalAlignment="Left" Height="22" Margin="110,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"><Run Language="ru-ru" Text="Название стикера"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="22" Margin="432,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"><Run Language="ru-ru" Text="Категория"/></TextBlock>
 
     </Grid>
 </Window>

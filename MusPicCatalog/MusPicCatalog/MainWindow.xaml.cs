@@ -34,16 +34,16 @@ namespace MusPicCatalog
 
             if (File.Exists(fileName))
             {
-                List<MusPic> readed_memes = JsonSerializer.Deserialize<List<MusPic>>(File.ReadAllText(fileName));
+                List<MusPic> readed_pics = JsonSerializer.Deserialize<List<MusPic>>(File.ReadAllText(fileName));
 
-                foreach (MusPic mem in readed_memes)
+                foreach (MusPic pic in readed_pics)
                 {
-                    pics.Add(mem);
+                    pics.Add(pic);
 
-                    picturesL.Items.Add(mem.Name);
+                    picturesL.Items.Add(pic.Name);
 
-                    if (!(categories.Items.Contains(mem.Category)))
-                        categories.Items.Add(mem.Category);
+                    if (!(categories.Items.Contains(pic.Category)))
+                        categories.Items.Add(pic.Category);
 
                 }
             }
@@ -70,8 +70,8 @@ namespace MusPicCatalog
                 pics.Remove(pics[picturesL.SelectedIndex]);
                 picturesL.Items.Clear();
 
-                foreach (MusPic mem in pics)
-                    picturesL.Items.Add(mem.Name);
+                foreach (MusPic pic in pics)
+                    picturesL.Items.Add(pic.Name);
             }
             else
                 MessageBox.Show("Select category all");
@@ -98,14 +98,14 @@ namespace MusPicCatalog
         {
             picturesL.Items.Clear();
             temp_pics.Clear();
-            foreach (MusPic mem in pics)
+            foreach (MusPic pic in pics)
             {
-                foreach (string tag in mem.Tags)
+                foreach (string tag in pic.Tags)
                 {
                     if (tag.ToLower().Equals(naiti_tag.Text.ToLower()))
                     {
-                        picturesL.Items.Add(mem.Name);
-                        temp_pics.Add(mem);
+                        picturesL.Items.Add(pic.Name);
+                        temp_pics.Add(pic);
                     }
                 }
             }
@@ -125,13 +125,13 @@ namespace MusPicCatalog
 
                 string base64ImageRepresentation = Convert.ToBase64String(imageArray);
 
-                MusPic mem = new MusPic(add_url_pic_wnd.name.Text, base64ImageRepresentation, add_url_pic_wnd.categr.Text);
+                MusPic pic = new MusPic(add_url_pic_wnd.name.Text, base64ImageRepresentation, add_url_pic_wnd.categr.Text);
 
-                pics.Add(mem);
-                picturesL.Items.Add(mem.Name);
+                pics.Add(pic);
+                picturesL.Items.Add(pic.Name);
                  
-                if (!(categories.Items.Contains(mem.Category))) 
-                    categories.Items.Add(mem.Category);
+                if (!(categories.Items.Contains(pic.Category))) 
+                    categories.Items.Add(pic.Category);
             }
         }
 
@@ -150,13 +150,13 @@ namespace MusPicCatalog
                 byte[] imageArray = System.IO.File.ReadAllBytes(dlg.FileName);
                 string base64ImageRepresentation = Convert.ToBase64String(imageArray);
 
-                MusPic mem = new MusPic(add_pic_wnd.name.Text, base64ImageRepresentation, add_pic_wnd.categr.Text);
+                MusPic pic = new MusPic(add_pic_wnd.name.Text, base64ImageRepresentation, add_pic_wnd.categr.Text);
 
-                pics.Add(mem);
-                picturesL.Items.Add(mem.Name);
+                pics.Add(pic);
+                picturesL.Items.Add(pic.Name);
 
-                if (!(categories.Items.Contains(mem.Category)))
-                    categories.Items.Add(mem.Category);
+                if (!(categories.Items.Contains(pic.Category)))
+                    categories.Items.Add(pic.Category);
             }
         }
         static ImageSource ByteToImage(byte[] imageData)
@@ -190,19 +190,19 @@ namespace MusPicCatalog
                 picturesL.Items.Clear();
                 if (categories.SelectedItem.ToString().Equals("all"))
                 {
-                    foreach (MusPic mem in pics)
-                        picturesL.Items.Add(mem.Name);
+                    foreach (MusPic pic in pics)
+                        picturesL.Items.Add(pic.Name);
                     return;
                 }
 
                 temp_pics.Clear();
 
-                foreach (MusPic mem in pics)
+                foreach (MusPic pic in pics)
                 {
-                    if (mem.Category == categories.SelectedItem.ToString())
+                    if (pic.Category == categories.SelectedItem.ToString())
                     {
-                        picturesL.Items.Add(mem.Name);
-                        temp_pics.Add(mem);
+                        picturesL.Items.Add(pic.Name);
+                        temp_pics.Add(pic);
                     }
                 }
             }
