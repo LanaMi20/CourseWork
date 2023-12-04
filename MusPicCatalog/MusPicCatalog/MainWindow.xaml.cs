@@ -172,7 +172,7 @@ namespace MusPicCatalog
 
         private void picturesL_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if ((categories.SelectedIndex == -1 || categories.SelectedIndex == 0) && (poisk_name.Text.Length == 0 && addT.Text.Length == 0) || temp_pics.Count == 0)
+            if ((categories.SelectedIndex == -1 || categories.SelectedIndex == 0) && (naiti_tag.Text.Length == 0 && poisk_name.Text.Length == 0))
             {
                 if (picturesL.SelectedIndex != -1)
                     PicImg.Source = ByteToImage(Convert.FromBase64String(pics[picturesL.SelectedIndex].Img));
